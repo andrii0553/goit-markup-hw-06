@@ -295,10 +295,10 @@
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .menu-nav-item-between{
-        padding-top: 40px;
-        padding-bottom: 40px;
+    .menu-nav-item:not(:last-child){
+        margin-bottom: 40px;
     }
+
 
     .menu-contacts-list{
         display: flex;
@@ -312,6 +312,7 @@
         line-height: 1.2em;
         letter-spacing: 0.04em;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        font-weight: 500;
     }
 
     .menu-contacts-tel{
@@ -320,14 +321,13 @@
         line-height: 1.2;
         letter-spacing: 0.02em;
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        padding-bottom: 24px;
+        font-style: normal;
     }
 
 
     .box-sign {
      display: flex;
      gap: 40px;
-     justify-content: center
     }
 
     .sign-linc {
@@ -351,7 +351,7 @@
     }
 
     .menu-contacts{
-        padding-bottom: 48px;
+        margin-bottom: 48px;
     }
 
 
@@ -584,7 +584,7 @@ li>p {
 
 .team {
     background: #F4F4FD;
-    padding: 96px 12px ;
+    padding: 96px 0;
 }
 
 .page-team {
@@ -596,6 +596,7 @@ li>p {
     flex-wrap: wrap;
     align-items: center;
     row-gap: 72px;
+    justify-content: center;
 }
 
 .team-item {
@@ -670,7 +671,7 @@ li>p {
 /*--Our portfolio--*/
 
 .portfolio {
-    padding: 96px 16px;
+    padding: 96px 0;
 }
 
 .title-portfolio {
@@ -784,8 +785,8 @@ li>p {
 
 .footer-logo {
     margin-bottom: 16px;
-    margin-left: 86px;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 
 .footer-paragraph {
@@ -797,9 +798,7 @@ li>p {
 }
 
 .footer-box-dbl {
-   margin: 0 auto;
-   padding-top: 72px;
-   padding-bottom: 72px;
+   margin: 72px auto;
 }
 
 .footer-paragraph-dbl {
@@ -892,25 +891,28 @@ li>p {
 
 @media screen and (min-width: 768px) and (max-width: 1157px){
     .page-footer .container {
-        max-width: 552px;
-        padding: 0;
+        max-width: 584px;
+        padding: 0 16px;
     }
 
 
 
     .footer-box-dbl{
     padding-top: 0;
-    margin-left: 24px;
+    margin: 0;
     }
 
     .footer-container {
         display: flex;
         align-items: baseline;
         flex-wrap: wrap;
+        gap:72px 24px;
+
     }
 
     .footer-logo{
         margin-left: 0;
+        text-align: left;
     }
 
     .footer-box-email{
@@ -919,6 +921,7 @@ li>p {
 
     .footer-paragraph-dbl{
         text-align: left;
+        margin: 0;
     }
 
     .footer-input {
@@ -944,6 +947,7 @@ li>p {
 
     .footer-logo{
         margin-left: 0;
+        text-align: left;
     }
 
     .footer-box-dbl{
